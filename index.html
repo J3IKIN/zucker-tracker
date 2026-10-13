@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173f37">
+  <meta name="description" content="Zusätzlichen Zucker aus Snacks und Getränken schnell erfassen.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Zucker-Tracker</title>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header"><div><p class="eyebrow">MEIN ERNÄHRUNGSTAGEBUCH</p><h1>Zucker-Tracker</h1></div><span class="logo" aria-hidden="true">◈</span></header>
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+    <section class="summary" aria-label="Zusammenfassung"><div class="summary-top"><div><p class="eyebrow">HEUTE ERFASST</p><div class="huge"><span id="todayTotal">0</span><small>g Zucker</small></div></div><div class="summary-pill" id="todayCount">0 Einträge</div></div><div class="meter"><div id="goalBar"></div></div><p class="summary-foot" id="goalLabel">Referenzlinie: 50 g (frei wählbar)</p><div class="summary-bottom"><div><span>Letzte 7 Tage</span><strong id="weekTotal">0 g</strong></div><div><span>Ø / Tag (7 Tage)</span><strong id="weekAverage">0 g</strong></div></div></section>
+    <section class="panel"><div class="section-head"><h2>Schnell hinzufügen</h2><button class="text-btn" id="manageFavorites">Favoriten verwalten</button></div><div id="favorites" class="favorites"></div><button class="secondary full" id="openCustom">+ Eigener Eintrag</button></section>
+    <section class="panel"><div class="section-head"><h2>Heute</h2><span id="dateLabel" class="muted"></span></div><div id="entries" class="entries"></div></section>
+    <section class="panel"><div class="section-head"><h2>Letzte 30 Tage</h2><span class="muted">g pro Tag</span></div><div id="chart" class="chart" role="img" aria-label="Balkendiagramm der letzten 30 Tage"></div><div class="stats"><div><small>30-Tage-Summe</small><strong id="monthTotal">0 g</strong></div><div><small>Ø / Tag</small><strong id="monthAverage">0 g</strong></div><div><small>Tage mit Eintrag</small><strong id="activeDays">0</strong></div></div><p class="muted hint">Diagrammbalken antippen, um das Datum und den Wert zu sehen.</p></section>
+    <section class="panel"><div class="section-head"><h2>Einstellungen & Backup</h2></div><label class="field-label" for="goal">Referenzlinie im Diagramm (g pro Tag, kein medizinisches Limit)</label><input id="goal" type="number" min="1" step="1" inputmode="numeric"><div class="actions"><button class="secondary" id="exportBtn">JSON exportieren</button><button class="secondary" id="importBtn">JSON importieren</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><p class="muted hint">Alles bleibt lokal auf diesem Gerät. Bitte regelmäßig ein Backup exportieren. Browserdaten löschen kann deine Einträge entfernen.</p></section>
+    <footer>Erfasst wird nur, was du hinzufügst – kein vollständiger Tageszuckerkonsum. Alle Werte sind Gesamtzucker je Portion, keine Aussage über zugesetzten Zucker.</footer>
+  </main>
+  <dialog id="entryDialog"><form id="entryForm" class="dialog-body"><div class="dialog-header"><h2 id="dialogTitle">Eintrag hinzufügen</h2><button type="button" class="close-btn" id="closeDialog" aria-label="Schließen">✕</button></div><label>Bezeichnung<input name="name" maxlength="70" required placeholder="z. B. 1 Stück Kuchen"></label><label>Zucker in Gramm<input name="grams" type="number" min="0" max="10000" step="0.1" inputmode="decimal" required placeholder="z. B. 12,5"></label><label>Datum<input name="date" type="date" required></label><label>Uhrzeit<input name="time" type="time" required></label><div class="dialog-actions"><button type="button" class="secondary" id="cancelDialog">Abbrechen</button><button type="submit" class="primary">Speichern</button></div></form></dialog>
+  <dialog id="favoriteDialog"><form id="favoriteForm" class="dialog-body"><div class="dialog-header"><h2 id="favoriteTitle">Favorit hinzufügen</h2><button type="button" class="close-btn" id="closeFavorite" aria-label="Schließen">✕</button></div><label>Name<input name="name" maxlength="35" required placeholder="z. B. Schokoriegel"></label><label>Emoji<input name="emoji" maxlength="8" placeholder="🍫"></label><label>Zucker pro Portion (g)<input name="grams" type="number" min="0" max="10000" step="0.1" inputmode="decimal" required></label><div class="dialog-actions"><button type="button" class="secondary" id="cancelFavorite">Abbrechen</button><button type="submit" class="primary">Speichern</button></div></form></dialog>
+</body>
+</html>

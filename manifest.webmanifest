@@ -1,0 +1,15 @@
+{
+  "name": "Zucker-Tracker – Snacks & Getränke",
+  "short_name": "Zucker",
+  "description": "Schnell Zucker aus Snacks und Getränken erfassen und auswerten",
+  "lang": "de-DE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f2",
+  "theme_color": "#173f37",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
