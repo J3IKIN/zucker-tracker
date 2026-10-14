@@ -57,3 +57,11 @@ Am PC `python -m http.server 8080 --bind 0.0.0.0` starten und am Android-Gerät 
 - Vergangene Tage können über „Eigener Eintrag“ nachträglich hinzugefügt werden; Bearbeiten/Löschen erfolgt in dieser Version nur über die heutige Liste.
 - Favoriten können bearbeitet, aber noch nicht gelöscht oder sortiert werden.
 - Keine Barcodes, Cloud-Synchronisierung, Produktdatenbank oder automatische Nährwertanalyse.
+
+
+## Neu in Version 2
+
+- **Favoriten löschen:** Favoriten verwalten → Favorit antippen → „Favorit löschen“. Historische Einträge bleiben erhalten.
+- **0-Zucker-Tag feiern:** Unter „0-Zucker-Tag feiern“ den Tag ausdrücklich markieren; der Tag erscheint im 30-Tage-Diagramm grün. Neutrale Tage ohne Erfassung sind nicht als 0-Zucker-Tag markiert. Bei einem neuen Eintrag für den Tag verschwindet die Markierung automatisch.
+- **Backups:** Export enthält jetzt die bestätigten 0-Zucker-Tage (Version 2). Alte Backups aus Version 1 lassen sich weiterhin importieren.
+- **Update:** Für die neue Version die Dateien in GitHub ersetzen. Vor dem Update sicherheitshalber ein JSON-Backup exportieren. Nach der Veröffentlichung die App ggf. zweimal neu öffnen, damit der Service Worker die neue Version übernimmt.
