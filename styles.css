@@ -19,3 +19,11 @@
 .scale-tick:last-child{transform:translateY(0)}
 .chart-shell .chart{flex:1;min-width:0}
 .chart .grid-line{position:absolute;left:0;right:0;height:1px;background:#e2ebe1;z-index:0;pointer-events:none}
+
+/* V5: Einträge des ausgewählten Tages */
+.chart-day-entries{margin-top:9px;border:1px solid #e2ebe1;border-radius:12px;padding:8px 12px}
+.chart-day-heading{margin:2px 0 8px;font-size:13px;color:#2d5744}
+.chart-day-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-top:1px solid #edf1eb;font-size:13px}
+.chart-day-name{overflow-wrap:anywhere;min-width:0}
+.chart-day-grams{flex-shrink:0;white-space:nowrap}
+.chart-day-empty{color:#77877f;font-size:12px;margin:4px 0}
