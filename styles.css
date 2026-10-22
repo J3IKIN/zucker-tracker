@@ -27,3 +27,25 @@
 .chart-day-name{overflow-wrap:anywhere;min-width:0}
 .chart-day-grams{flex-shrink:0;white-space:nowrap}
 .chart-day-empty{color:#77877f;font-size:12px;margin:4px 0}
+
+/* V7: clean-modern Logo-Badge im App-Header */
+.logo-badge{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  display:grid;
+  place-items:center;
+  padding:8px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#fbfefd 0%,#eef6f1 100%);
+  border:1px solid #dce8df;
+  box-shadow:0 10px 24px rgba(23,63,55,.10), inset 0 1px 0 rgba(255,255,255,.8);
+  overflow:hidden;
+}
+.logo-image{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:contain;
+  border-radius:13px;
+}
