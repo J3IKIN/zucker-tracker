@@ -61,3 +61,11 @@
 .chart-entry-action{display:grid;place-items:center;width:36px;height:36px;border:1px solid #dce8df;border-radius:9px;background:#f4f8f4;color:#28634b;font-size:17px;cursor:pointer}
 .chart-entry-action.danger-action{background:#fff4f2;color:#ae3535;border-color:#f0d4ce}
 .chart-entry-action:focus-visible{outline:3px solid #60a688;outline-offset:2px}
+
+/* V10: Datumskontext in der vorhandenen Schnelleingabe */
+.quick-add-context{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 13px;margin:0 0 14px;border:1px solid #cce2d5;border-radius:13px;background:#edf8f0}
+.quick-add-context[hidden]{display:none}
+.quick-add-context-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+.quick-add-context-label{font-size:10px;font-weight:800;letter-spacing:1px;color:#41715a}
+.quick-add-context strong{font-size:14px;color:#214d3b}
+.quick-add-reset{font-size:12px;white-space:nowrap;border:1px solid #bfdbc9;background:#fff;border-radius:9px;padding:8px 10px}
