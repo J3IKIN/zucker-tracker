@@ -1,5 +1,5 @@
-const CACHE='zucker-tracker-v9';
-const ASSETS=['./','./index.html','./styles.css?v=9','./app.js?v=9','./manifest.webmanifest?v=6','./icons/icon-192-v6.webp'];
+const CACHE='zucker-tracker-v10';
+const ASSETS=['./','./index.html','./styles.css?v=10','./app.js?v=10','./manifest.webmanifest?v=6','./icons/icon-192-v6.webp'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });
