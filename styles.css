@@ -49,3 +49,15 @@
   object-fit:contain;
   border-radius:13px;
 }
+
+/* V8: Vergangene Einträge direkt unter dem 30-Tage-Diagramm verwalten */
+.chart-day-controls{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:2px 0 8px}
+.chart-day-controls .chart-day-heading{margin:0}
+.chart-add-btn{padding:8px 12px;font-size:12px;border-radius:10px;white-space:nowrap}
+.chart-day-row{align-items:center}
+.chart-day-name{flex:1;min-width:0}
+.chart-day-grams{margin-left:auto}
+.chart-day-actions{display:flex;align-items:center;gap:5px;flex:none}
+.chart-entry-action{display:grid;place-items:center;width:36px;height:36px;border:1px solid #dce8df;border-radius:9px;background:#f4f8f4;color:#28634b;font-size:17px;cursor:pointer}
+.chart-entry-action.danger-action{background:#fff4f2;color:#ae3535;border-color:#f0d4ce}
+.chart-entry-action:focus-visible{outline:3px solid #60a688;outline-offset:2px}
