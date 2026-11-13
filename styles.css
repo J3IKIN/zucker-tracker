@@ -109,3 +109,8 @@
 .chart-day-pick{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:-3px 0 12px}
 .chart-day-pick label{font-size:12px;color:#536d5d;font-weight:650}
 .chart-day-pick input{width:auto;max-width:175px;min-width:0;padding:7px 10px;border-radius:10px;font-size:13px;color:#214c3a}
+
+/* V13: 0-Zucker-Bestätigung unmittelbar beim ausgewählten Diagrammtag */
+.chart-zero-control{margin:12px 0 0}
+.chart-zero-control .zero-btn{margin:0}
+.chart-zero-control .hint{margin:7px 2px 0}
